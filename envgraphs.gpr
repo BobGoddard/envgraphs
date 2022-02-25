@@ -1,0 +1,32 @@
+with "/opt/ada/2021/share/gpr/unix_utils.gpr";
+with "/opt/GNAT/2021/share/gpr/gnatcoll_syslog.gpr";
+with "/opt/ada/2021/share/gpr/adabase.gpr";
+
+project Envgraphs is
+
+   for Source_Dirs use ("/home/src/build/Ada/envgraphs/src");
+   for Object_Dir use "obj";
+   for Main use ("envgraphs.adb");
+   for Exec_Dir use "/home/src/build/Ada/envgraphs/exec";
+
+   package Compiler is
+      for Switches ("ada") use ("-g", "-gnatVcefimpostr", "-gnatwc.cdf.f.gh.hj.s.rr.pp.om.ll.kktu.u.w.x.d", "-gnatyaAbBcCdefhiIklnoOprsStux");
+   end Compiler;
+
+   package Linker is
+      for Switches ("ada") use ("-lmariadb", "-L/opt/owfs/lib64", "-lowcapi", "-g");
+   end Linker;
+
+   package Builder is
+      for Switches ("ada") use ("-g");
+   end Builder;
+
+   package Binder is
+   end Binder;
+
+   package Ide is
+      for Artifacts_Dir use "/home/src/build/Ada/envgraphs/artifacts";
+   end Ide;
+
+end Envgraphs;
+

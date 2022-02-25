@@ -1,0 +1,7 @@
+This Ada software was built to create SVG graphs from data stored in a MySQL/Maria database.
+
+That data comes from various 1-Wire sensors hooked up to both the local PC and a Raspberry PI.
+
+This software requires XMLAda from AdaCore & the MySQL bindings from https://github.com/jrmarino/AdaBase.
+
+It can be built from the GCC Ada commandline, but is best to built it from within GNATStudio - https://www.adacore.com/download.
